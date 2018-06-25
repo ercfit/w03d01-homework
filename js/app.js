@@ -21,6 +21,7 @@ class Tomagatchi {
 		console.log("I'm bored...");
 	}
 
+
 };
 
 const tg1 = new Tomagatchi();
@@ -30,5 +31,20 @@ const tg1 = new Tomagatchi();
 	sleep = 9,
 	bordom = 1,
 	age = 7;
+
+	const $btn1 = $('#btn1');
+	$btn1.on('click', () => {
+		console.log('FEED button clicked');
+	})
+
+	const $btn2 = $('#btn2');
+	$btn2.on('click', () => {
+		console.log('FEED button clicked');
+	})
+
+	const $btn3 = $('#btn3');
+	$btn3.on('click', () => {
+		console.log('FEED button clicked');
+	})
 
 });
