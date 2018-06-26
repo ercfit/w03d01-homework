@@ -34,5 +34,20 @@ button{
 	display: inline-flex;
 	padding: 5px;
 	font-family: 'Gaegu', cursive;
+	vertical-align: center;
 
+}
+
+#btn1{
+
+}
+
+#btn2{
+	vertical-align: center;
+	
+}
+
+#btn3{
+	vertical-align: right;
+	
 }
