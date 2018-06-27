@@ -1,3 +1,7 @@
+.start-game{
+	
+}
+
 body{
 	background-color: grey;
 
@@ -36,18 +40,4 @@ button{
 	font-family: 'Gaegu', cursive;
 	vertical-align: center;
 
-}
-
-#btn1{
-
-}
-
-#btn2{
-	vertical-align: center;
-	
-}
-
-#btn3{
-	vertical-align: right;
-	
 }

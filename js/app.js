@@ -1,120 +1,95 @@
 
 console.log("allez...");
 
+
+
+
+
+//if attributes = 10 --> death
+
 	class Tomagatchi {
 		constructor(name, age, hunger, sleep, bordom){
 			this.name = name;
-			this.age = 0;
-			this.hunger = 0;
-			this.sleep = 0;
-			this.bordom = 0;
+			this.age = 5;
+			this.hunger = 7;
+			this.sleep = 4;
+			this.boredom = 5;
 		}
-			hungry(){
-				if(this.hunger > 1){
-					this.hunger--;
-				}
-				console.log("I'm hungry!", this.hunger);
+		feed(){
+			if (this.hunger > 1){
+				this.hunger--;
 			}
-
-			tired(){
-				if(this.sleep > 1){
-					this.sleep--;
-				}
-				console.log("I'm sleepy!", this.sleep);
+		}
+		sleep(){
+			if(this.sleep > 1){
+				this.sleep--;
 			}
-
-			bored(){
-				if(this.bordom > 1){
-					this.bordom--;
-				}
-				console.log("I'm bored...", this.bordom);
+		}
+		inspire(){
+			if(this.boredom > 1){
+				this.boredom--;
 			}
+		}
 
-			setName(){
-				//insert option to accept input
-				console.log(`Your Tomagatchi's name is ${this.name} `);
-			}
-
-			incrAge(){
-				this.age++;
-			}
-
-			
-			
-
-			upperRoom(){
-				if(this.hunger > 9 || this.sleep > 9 || this.bordom > 9){
-					console.log(`${this.name} is dead. You should re-evaluate your decision to be a pet owner.`);
-				}
-			}
-		
-
+		setName(){
+			console.log(`Your Tomagatchi's name is: ${this.name}`);
+		}
 	}
 
-
-			const testTg = new Tomagatchi();
-			console.log(testTg);
-			console.log(typeof(testTg));
-			testTg.hungry(2);
-			testTg.tired(11);
-			testTg.bored(1);
-			testTg.upperRoom();
-
-			//prints starting age which was set in constructor
-				console.log(testTg.age);
-
-			//set name function
-			//prompt user for name (in HTML--see 6/26 lesson)--then testTG.name = user input....
-			testTg.name = ("Benedict Cumberbatch");
-			testTg.setName(testTg.name);
-
-			//tesing increaseAge
-			testTg.incrAge(testTg.age);
-				console.log(testTg.age);
-
-			//age increases w/ time	(every 5 sec)
-			var ageIntv  = setInterval(testTg.incrAge(), 5000);
-				console.log(ageIntv);
-
-			// //hunger increases w/ time	(every 5 sec)
-			// var ageIntv  = setInterval(testTg.incrAge(), 5000);
-			// 	console.log(ageIntv);
-				
-			// //sleep increases w/ time	(every 5 sec)
-			// var ageIntv  = setInterval(testTg.incrAge(), 5000);
-			// 	console.log(ageIntv);	
-
-			// //boredom increases w/ time	(every 5 sec)
-			// var ageIntv  = setInterval(testTg.incrAge(), 5000);
-			// 	console.log(ageIntv);
+	let tG = new Tomagatchi();
+	//set name function
+	//****prompt user for name (in HTML--see 6/26 lesson)--then tG.name = user input....
+	tG.name = ("Benedict Cumberbatch");
+	tG.setName(tG.name);
 
 
-			const $btn1 = $('#btn1');
-			$btn1.on('click', () => {
-				console.log('FEED button clicked');
-			})
-
-			const $btn2 = $('#btn2');
-			$btn2.on('click', () => {
-				console.log('LIGHTS OFF button clicked');
-			})
-
-			const $btn3 = $('#btn3');
-			$btn3.on('click', () => {
-				console.log('PLAY button clicked');
-			})
-
-		//GAME LOOP
-			let seconds = 0;
-			const timePassing = () => {
-				console.log(`It has been ${seconds} seconds`);
-				seconds++;
-			}
-
-
-
-			
-			// timePasses = setInterval(timePassing, 3000);
-			// clearIntv(timePasses);
+	let seconds = 0;
+	$('.start-game').click(function(){
 	
+		const timePassing = () => {
+		console.log(`SECONDS: ${seconds}`);
+		seconds++;
+
+			if(seconds % 10 == 0){
+				tG.hunger++;
+
+			}if(seconds % 2 == 0){
+				tG.sleep++;
+
+			}if(seconds % 5 == 0){
+				tG.boredom++;
+
+			}if(seconds % 60 == 0){
+				tG.age++;
+
+			}if(Math.floor(Math.random() * 10) > 4) {
+				tG.feed();
+
+			}if(tG.hunger >= 10 || tG.sleep >= 10 || tG.boredom >= 10){
+				console.log(`${tG.name} is dead. You should re-evaluate your decision to be a pet owner.`);
+				clearInterval(timePasses);
+				}
+			
+			console.log(`HUNGER: ${tG.hunger}`);
+			console.log(`SLEEP: ${tG.sleep}`);
+			console.log(`BOREDOM: ${tG.boredom}`);
+			console.log(`AGE: ${tG.age}`);
+
+			// const $btn1 = $('#btn1');
+			// $btn1.on('click', (feed) => {
+			// 	console.log('FEED button clicked');
+			// })
+
+			// const $btn2 = $('#btn2');
+			// $btn2.on('click', (sleep) => {
+			// 	console.log('LIGHTS OFF button clicked');
+			// })
+
+			// const $btn3 = $('#btn3');
+			// $btn3.on('click', (inspire) => {
+			// 	console.log('PLAY button clicked');
+			// })
+			}
+			const timePasses = setInterval(timePassing, 1000);		
+	})
 
