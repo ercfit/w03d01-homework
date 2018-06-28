@@ -8,12 +8,12 @@
 
 body{
 	background-color: pink;
-	padding: 20px;
+	padding: 80px 50px 80px 500px;
 
 }
 
 .container{
-	padding: 50px;
+	padding: 10px;
 	position: absolute;
 
 }
@@ -66,7 +66,7 @@ img{
 	border: solid black 3px;
 	margin-right: auto;
 	margin-left: auto;
-	width: 60%
+	width:70%;
 
 }
 

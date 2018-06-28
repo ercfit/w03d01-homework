@@ -26,7 +26,7 @@ class Tomagatchi {
 	let tG = new Tomagatchi();
 
 	const $btn1 = $('#btn1');
-	$btn1.on('click', (eat) => {
+	$btn1.on('click', (eat) => {	
 		tG.eat();
 	})
 
@@ -41,19 +41,8 @@ class Tomagatchi {
 	})
 
 
-// function moveRight() {
-//     $('.container').animate({left: "+=50"}, 2000, function() {
-//         moveLeft();
-//     });
-// }
+//name tG
 
-// function moveLeft(){
-//     $('.container').animate({left: "-=50"}, 2000, function () {
-//         setTimeout(moveRight, 50);
-//     });
-// }
-
-// setTimeout(moveRight, 50);
 $('#submit-btn').on('click', () => {
 
 	const name = $('#input-box').val();
@@ -61,7 +50,7 @@ $('#submit-btn').on('click', () => {
 	$('.span2').append($h3).text("Your Tomagatchi's name is: " + name);
 })
 
-
+//GAME LOOP
 let seconds = 0;
 
 $('.start-game').on('click', (e) => {
@@ -102,6 +91,9 @@ $('.start-game').on('click', (e) => {
 	}if(tG.hunger >= 10 || tG.sleep >= 10 || tG.boredom >= 10){
 		let $h4 = ('<h4/>')
 		$('.span3').append($h4).text("Your Tomagatchi is dead. You should re-evaluate your decision to be a pet owner.");
+
+//morph photo
+		//$('<img src="images/cartoonQueen.jpeg alt="cartoonQueen">').appendTo('.container');
 	
 
 
@@ -115,10 +107,26 @@ $('.start-game').on('click', (e) => {
 		$('.boredom').text(`${tG.boredom}`);
 			
 		$('.age').text(`${tG.age}`);
+
+//animate
+	// function moveRight(){
+	//     $('.container').animate({left: "+=100"}, 2000, function() {
+	//         moveLeft();
+	//     });
+	// }
+
+	// function moveLeft(){
+	//     $('.container').animate({left: "-=100"}, 2000, function () {
+	//         setTimeout(moveRight, 50);
+	//     });
+	// }
+
+	// setTimeout(moveRight, 50);
+
+	// moveRight();
+	// moveLeft();
 	
 
-	// tg.moveRight();
-	// tg.moveLeft();
 }
 	const timePasses = setInterval(timePassing, 1000);
 })
