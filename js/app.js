@@ -1,11 +1,4 @@
 
-console.log("allez...");
-
-
-
-
-
-//if attributes = 10 --> death
 
 	class Tomagatchi {
 		constructor(name, age, hunger, sleep, bordom){
@@ -48,7 +41,7 @@ console.log("allez...");
 	
 		const timePassing = () => {
 		console.log(`SECONDS: ${seconds}`);
-		seconds++;
+		seconds++; //ryan's code--I had a hard time with the interval
 
 			if(seconds % 10 == 0){
 				tG.hunger++;

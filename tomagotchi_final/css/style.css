@@ -1,0 +1,136 @@
+.start-game{
+
+	border: solid black 2px;
+	margin: 10px;
+	
+}
+
+
+body{
+	background-color: pink;
+	padding: 20px;
+
+}
+
+.container{
+	padding: 50px;
+	position: absolute;
+
+}
+
+.span1{
+
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	border: 1px;
+	padding: 2px;
+	margin: 2px;
+	font-family: 'Gaegu', cursive;
+	font-weight: 700;
+}
+
+.span2{
+
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	border: 1px;
+	padding: 2px;
+	margin: 2px;
+	font-family: 'Gaegu', cursive;
+	font-weight: 700;
+}
+
+.span3{
+
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	border: 1px;
+	padding: 2px;
+	margin: 2px;
+	font-family: 'Gaegu', cursive;
+	font-weight: 700;
+}
+
+h2{
+
+	font-family: 'Gaegu', cursive;
+	font-weight: 700;
+}
+
+img{
+	
+	display: block;
+	border: solid black 3px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 60%
+
+}
+
+.row1{
+
+	padding: 10px 10px 10px 10px;
+	margin: 0px 10px 10px 10px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+button{
+	
+	border: solid black 2px; 
+	border-radius: 5px;
+	padding: 2px;	
+	margin: 2px;
+	font-family: 'Gaegu', cursive;
+	font-weight: 600;
+	width: 20%
+
+}
+
+#input-box{
+	border: solid black 2px; 
+	border-radius: 5px;
+	padding: 2px;	
+	margin: 2px;
+	font-family: 'Gaegu', cursive;
+	font-weight: 600;
+	width: 20%
+
+}
+
+#submit-btn{
+	border: solid black 2px; 
+	border-radius: 5px;
+	padding: 2px;	
+	margin: 2px;
+	font-family: 'Gaegu', cursive;
+	font-weight: 600;
+	width: 20%
+
+}
+
+.col1{
+
+	display: inline-block;
+	border: 1px;
+	padding: 2px;
+	margin: 2px;
+	font-family: 'Gaegu', cursive;
+	font-weight: 700;
+
+}
+
+p{
+	
+
+}
+
+.stats{
+	text-decoration: underline solid black;
+	
+}
+
