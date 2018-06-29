@@ -1,3 +1,5 @@
+$('document').ready (function(){
+
 class Tomagatchi {
 		constructor(name, age, hunger, sleep, bordom){
 			this.name = name;
@@ -91,14 +93,25 @@ $('.start-game').on('click', (e) => {
 	}if(tG.hunger >= 10 || tG.sleep >= 10 || tG.boredom >= 10){
 		let $h4 = ('<h4/>')
 		$('.span3').append($h4).text("Your Tomagatchi is dead. You should re-evaluate your decision to be a pet owner.");
+		$('#beyonce').attr('src', 'images/cartoonQueen.png').css("border", "0");
+		
+	//animate
+		function moveRight(){
+		    $('#beyonce').animate({left: "+=300", top: "-=100"}, 2000, function() {
+		        moveLeft();
+		    });
+		}
 
-//morph photo
-		//$('<img src="images/cartoonQueen.jpeg alt="cartoonQueen">').appendTo('.container');
-	
+		function moveLeft(){
+		    $('#beyonce').animate({left: "-=8000"}, 2000, function () {
+		    });
+		}
 
+		setTimeout(moveRight, 50);//this waits to start intial movement based on time provided
 
+		// $('.row1').empty() <--- This clears out buttons
 		clearInterval(timePasses);
-}
+}		
 			
 		$('.hunger').text(`${tG.hunger}`);
 			
@@ -108,25 +121,10 @@ $('.start-game').on('click', (e) => {
 			
 		$('.age').text(`${tG.age}`);
 
-//animate
-	// function moveRight(){
-	//     $('.container').animate({left: "+=100"}, 2000, function() {
-	//         moveLeft();
-	//     });
-	// }
-
-	// function moveLeft(){
-	//     $('.container').animate({left: "-=100"}, 2000, function () {
-	//         setTimeout(moveRight, 50);
-	//     });
-	// }
-
-	// setTimeout(moveRight, 50);
-
-	// moveRight();
-	// moveLeft();
+	
 	
 
 }
 	const timePasses = setInterval(timePassing, 1000);
+})
 })

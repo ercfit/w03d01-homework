@@ -79,6 +79,10 @@ img{
 	text-align: center;
 }
 
+#beyonce {
+	position: relative;
+}
+
 button{
 	
 	border: solid black 2px; 
